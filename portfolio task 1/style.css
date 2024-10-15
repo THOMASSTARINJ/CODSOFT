@@ -1,0 +1,192 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Section Styles */
+.section {
+    padding: 2rem 0;
+    margin: 2rem 0;
+    background-color: white;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* About Section */
+#about .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+#about p {
+    flex: 1;
+}
+
+/* Skills Section */
+#skills ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+#skills ul li {
+    margin: 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Projects Section */
+#projects .project-item {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#projects img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+/* Resume Section */
+#resume a {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#resume a:hover {
+    background-color: #555;
+}
+
+
+/* Contact Section */
+#contact p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+/* General Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Add Animation to Header Section */
+header h1 {
+    animation: bounce 2s ease;
+}
+
+header p {
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 1s;
+}
+
+/* Add Animation to About Section */
+#about .about-content {
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/* Skills Section Animation */
+#skills ul li {
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: calc(0.3s * var(--i));
+    opacity: 0;
+}
+
+#skills ul li:nth-child(1) { --i: 1; }
+#skills ul li:nth-child(2) { --i: 2; }
+#skills ul li:nth-child(3) { --i: 3; }
+#skills ul li:nth-child(4) { --i: 4; }
+#skills ul li:nth-child(5) { --i: 5; }
+#skills ul li:nth-child(6) { --i: 6; }
+
+/* Projects Section Animation */
+#projects .project-item {
+    animation: slideIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* Resume Button Animation */
+#resume a {
+    animation: bounce 2s ease infinite;
+}
+
+/* Contact Section Fade-in */
+#contact p {
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s;
+}
+
+/* Footer Animation */
+footer p {
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 0.5s;
+}
